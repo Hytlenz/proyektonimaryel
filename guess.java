@@ -10,14 +10,14 @@ import java.util.*;
    Scanner input = new Scanner(System.in);
    Random rand = new Random();
    
-   loop:
+   game:
    for(int x=0 ; ; x++){
     int random = rand.nextInt(10);
-    System.out.print("==========\n===[Guess The Number]===\n==========\n");
-    System.out.print("Enter Number: ");
+    System.out.print("\n < [ Guess The Number ] > \n [ Input Here ]: ");
     int guess = nextInt();
     if(guess==random){
      System.out.print("\nWinner Winner Chicken Dinner!\n");
+    
     } else {
      System.out.print("\nBetter Luck Next Time!\n");
     }
@@ -25,6 +25,17 @@ import java.util.*;
     
     looper:
     for(int y=0; ; y++){
-     System.out.print("\nType [ no ] for No and \nType any for continue playing\n");
+     System.out.print("\n[ Do you want to play again? ] \n [ Type : yes || no ] \n [ Input Here ]: ");
      String ans = input.next();
      
+     if(ans.equalsIgnoreCase("yes")){
+      continue game;
+     } else if(ans.equalsIgnoreCase("no")){
+      System.out.print("\n [ Thank You For Playing ] \n");
+      break game;
+     } else {
+      continue looper;
+      
+      
+
+     }}}}}
